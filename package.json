@@ -1,9 +1,9 @@
 {
 	"name": "atstart",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Startup script generator",
 	"bin": {
-		"atstartup": "./dist/tool.js"
+		"atstart": "./dist/tool.js"
 	},
 	"preferGlobal": true,
 	"main": "./dist/index.js",

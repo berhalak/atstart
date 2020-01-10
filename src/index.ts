@@ -30,7 +30,7 @@ class Script extends File {
 		let s = "// genarated by atstart\r\n";
 		for (let f of this.files) {
 			const relative = path.relative(this.folder, f.path);
-			s += `import "./${relative}"\r\n`;
+			s += `import "./${relative.replace(/\\/g, '/')}"\r\n`;
 		}
 		return s;
 	}
@@ -38,7 +38,6 @@ class Script extends File {
 
 class Directory {
 	async visitFiles(visitor: (file: File) => Promise<boolean>) {
-		console.log("Reading folder " + this.path)
 		const files = await fs.readdir(this.path);
 		let goDeep = true;
 		for (let fileName of files) {
