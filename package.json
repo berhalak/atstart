@@ -1,0 +1,37 @@
+{
+	"name": "atstart",
+	"version": "1.0.0",
+	"description": "Startup script generator",
+	"bin": {
+		"atstartup": "./dist/tool.js"
+	},
+	"preferGlobal": true,
+	"main": "./dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"test": "npm run build ; node ./dist/tool.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/berhalak/atstart.git"
+	},
+	"keywords": [
+		"startup",
+		"generator",
+		"script",
+		"reflection"
+	],
+	"author": "berhalak",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/berhalak/atstart/issues"
+	},
+	"homepage": "https://github.com/berhalak/atstart#readme",
+	"devDependencies": {
+		"@types/node": "^13.1.6",
+		"typescript": "^3.7.4"
+	},
+	"dependencies": {
+		"then-fs": "^2.0.0"
+	}
+}
